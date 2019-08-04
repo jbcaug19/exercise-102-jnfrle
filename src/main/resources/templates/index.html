@@ -5,6 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-    Hello World
+    <a href="/add">Add a Movie</a>
+    <div th:each="movie : ${movies}">
+        <h4 th:inline="text">[[${movie.name}]] by [[${movie.studio}]]</h4>
+        <p th:text="${movie.genre}"></p>
+    </div>
 </body>
 </html>
